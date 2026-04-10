@@ -111,7 +111,13 @@ export function ConsultationForm({ introText }: ConsultationFormProps) {
           <CheckCircle className="w-6 h-6" />
         </div>
         <h3 className="text-lg font-semibold text-slate-900 mb-1.5">Request received</h3>
-        <p className="text-sm text-slate-600 max-w-xs">{serverMessage}</p>
+        <p className="text-sm text-slate-600 max-w-xs mb-5">{serverMessage}</p>
+        <button
+          onClick={() => { setStatus('idle'); setServerMessage(''); }}
+          className="text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
+        >
+          Send another request
+        </button>
       </div>
     );
   }
