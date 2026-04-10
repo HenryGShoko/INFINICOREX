@@ -95,7 +95,7 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
 
         <div className="border-t border-white/[0.08] py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-white/50">&copy; {currentYear} {settings.companyName}</p>
-          <p className="text-sm text-white/50">South Africa</p>
+          <p className="text-sm text-white/50">Eastgate Complex, 6th Floor Red Bridge South, Robert Mugabe Rd, Harare, Zimbabwe</p>
         </div>
       </Container>
     </footer>

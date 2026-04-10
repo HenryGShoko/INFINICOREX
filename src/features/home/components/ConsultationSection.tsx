@@ -47,11 +47,11 @@ export function ConsultationSection({ section }: ConsultationSectionProps) {
               <div className="relative mt-10 pt-6 border-t border-white/[0.1]">
                 <p className="text-sm text-white/50 mb-1.5">Prefer email?</p>
                 <a
-                  href="mailto:info@infinicorex.co.za"
+                  href="mailto:info@afriword.co.za"
                   className="inline-flex items-center gap-2 text-sm font-medium text-brand-300 hover:text-brand-200 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  info@infinicorex.co.za
+                  info@afriword.co.za
                 </a>
               </div>
             </div>
