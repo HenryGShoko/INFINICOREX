@@ -63,6 +63,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ── Scroll offset for sticky header ── */
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 /* ── Focus ── */
 *:focus-visible {
   outline: 2px solid var(--color-brand-500);
@@ -87,6 +92,41 @@ body {
 .bg-dot-pattern {
   background-image: radial-gradient(circle, var(--color-slate-200) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+/* ── Section divider gradients ── */
+.divider-to-dark {
+  height: 6px;
+  background: linear-gradient(to bottom, #ffffff, var(--color-navy-950));
+}
+
+.divider-to-light {
+  height: 6px;
+  background: linear-gradient(to bottom, var(--color-navy-950), #ffffff);
+}
+
+.divider-to-slate {
+  height: 6px;
+  background: linear-gradient(to bottom, #ffffff, var(--color-slate-50));
+}
+
+.divider-slate-to-white {
+  height: 6px;
+  background: linear-gradient(to bottom, var(--color-slate-50), #ffffff);
+}
+
+/* ── CTA pulse ── */
+@keyframes ctaPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+}
+
+.animate-cta-pulse {
+  animation: ctaPulse 2.5s ease-in-out infinite;
 }
 
 /* ── Dropdown animation ── */

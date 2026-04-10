@@ -40,7 +40,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             </p>
 
             <div className="mt-9 flex flex-col sm:flex-row gap-3">
-              <Button href={hero.primaryCtaTarget} variant="primary" size="lg">
+              <Button href={hero.primaryCtaTarget} variant="primary" size="lg" className="animate-cta-pulse">
                 {hero.primaryCtaLabel}
                 <ArrowRight className="w-4 h-4" />
               </Button>

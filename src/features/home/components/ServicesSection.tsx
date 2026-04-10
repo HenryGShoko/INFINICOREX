@@ -30,7 +30,7 @@ export function ServicesSection({ categories }: ServicesSectionProps) {
             return (
               <div
                 key={category.id}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 transition-all duration-300 hover:border-brand-200 hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)]"
+                className="group rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 transition-all duration-300 hover:border-brand-200 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1"
               >
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-5">

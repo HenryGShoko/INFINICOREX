@@ -15,12 +15,16 @@ export default async function HomePage() {
   return (
     <>
       <HeroSection hero={hero} />
+      <div className="divider-to-light" />
       <ClientLogos />
       <ServicesSection categories={serviceCategories} />
+      <div className="divider-to-dark" />
       <WhyUsSection items={whyUsItems} />
+      <div className="divider-to-slate" />
       <TestimonialsSection />
       <ProcessSection steps={processSteps} />
       <FaqSection />
+      <div className="divider-slate-to-white" />
       <ConsultationSection section={consultationSection} contactEmail={siteSettings.contactEmail} />
     </>
   );

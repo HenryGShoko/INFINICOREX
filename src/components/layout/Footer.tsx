@@ -22,8 +22,8 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
             {/* Brand */}
             <div className="col-span-2 sm:col-span-4 lg:col-span-4 mb-4 lg:mb-0">
               <Link href="/" className="inline-flex items-center gap-2 mb-4">
-                <div className="w-6 h-6 rounded-md bg-gradient-to-br from-brand-600 to-brand-700 flex items-center justify-center">
-                  <span className="text-[9px] font-bold text-white leading-none">IX</span>
+                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-600 to-brand-700 flex items-center justify-center shadow-[0_1px_3px_rgba(37,211,102,0.3)]">
+                  <span className="text-[11px] font-bold text-white leading-none tracking-tight">IX</span>
                 </div>
                 <span className="text-sm font-bold tracking-[-0.02em] text-white">
                   {settings.logoText}
