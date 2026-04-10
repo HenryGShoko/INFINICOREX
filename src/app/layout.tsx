@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 import { getOrganizationSchema } from '@/lib/utils/structured-data';
+import { GoogleAnalytics } from '@/components/ui/GoogleAnalytics';
 import './globals.css';
 
 const inter = Inter({
@@ -52,6 +53,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
         />
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );
