@@ -94,7 +94,7 @@ export function MobileNav({ categories, ctaLabel }: MobileNavProps) {
           </div>
 
           {['Why Us', 'Process', 'Contact'].map((label) => {
-            const id = label.toLowerCase().replace(/\s/g, '-');
+            const id = label === 'Contact' ? 'consultation' : label.toLowerCase().replace(/\s/g, '-');
             return (
               <a
                 key={label}

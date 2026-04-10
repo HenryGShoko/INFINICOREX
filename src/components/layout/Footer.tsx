@@ -40,16 +40,19 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
                 Company
               </p>
               <ul className="space-y-2.5">
-                {['Home', 'Services', 'Why Us', 'Process', 'Contact'].map((label) => (
-                  <li key={label}>
-                    <a
-                      href={label === 'Home' ? '#' : `#${label.toLowerCase().replace(/\s/g, '-')}`}
-                      className="text-sm text-white/70 hover:text-white transition-colors"
-                    >
-                      {label}
-                    </a>
-                  </li>
-                ))}
+                {['Home', 'Services', 'Why Us', 'Process', 'Contact'].map((label) => {
+                  const id = label === 'Home' ? '' : label === 'Contact' ? 'consultation' : label.toLowerCase().replace(/\s/g, '-');
+                  return (
+                    <li key={label}>
+                      <a
+                        href={`#${id}`}
+                        className="text-sm text-white/70 hover:text-white transition-colors"
+                      >
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 

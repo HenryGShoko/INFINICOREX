@@ -24,6 +24,7 @@ export const serviceCategoriesQuery = `*[_type == "serviceCategory"] | order(ord
   iconKey,
   items[]{
     _key,
+    "slug": slug.current,
     title,
     description
   }

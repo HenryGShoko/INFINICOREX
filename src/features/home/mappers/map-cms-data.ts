@@ -57,7 +57,7 @@ export function mapServiceCategories(raw: RawServiceCategory[] | null): ServiceC
     iconKey: cat.iconKey,
     items: (cat.items ?? []).map((item) => ({
       id: item._key,
-      slug: item.slug ?? item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, ''),
+      slug: item.slug ?? (item.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || 'untitled'),
       title: item.title,
       description: item.description,
     })),
