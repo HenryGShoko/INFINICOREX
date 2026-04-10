@@ -2,7 +2,6 @@ import { getHomePageData } from '@/features/home/queries/get-home-data';
 import { HeroSection } from '@/features/home/components/HeroSection';
 import { ClientLogos } from '@/features/home/components/ClientLogos';
 import { ServicesSection } from '@/features/home/components/ServicesSection';
-import { CaseStudiesSection } from '@/features/home/components/CaseStudiesSection';
 import { WhyUsSection } from '@/features/home/components/WhyUsSection';
 import { TestimonialsSection } from '@/features/home/components/TestimonialsSection';
 import { ProcessSection } from '@/features/home/components/ProcessSection';
@@ -18,7 +17,6 @@ export default async function HomePage() {
       <HeroSection hero={hero} />
       <ClientLogos />
       <ServicesSection categories={serviceCategories} />
-      <CaseStudiesSection />
       <WhyUsSection items={whyUsItems} />
       <TestimonialsSection />
       <ProcessSection steps={processSteps} />
