@@ -14,19 +14,19 @@ const testimonials: Testimonial[] = [
     quote: 'INFINICOREX rebuilt our entire booking platform in under three months. The system handles 10x the traffic of our previous solution with zero downtime. Their engineering team is genuinely world-class.',
     name: 'David Moyo',
     role: 'CTO',
-    company: 'Atlas Logistics',
+    company: 'PiqueSquid',
   },
   {
     quote: "We needed a partner who understood both the technical and business side. INFINICOREX didn't just build what we asked for — they challenged our assumptions and delivered something far better.",
     name: 'Sarah Ndlovu',
     role: 'Head of Digital',
-    company: 'Meridian Finance',
+    company: 'ACZ',
   },
   {
     quote: 'Their managed IT services saved us from a ransomware incident that would have cost us weeks of downtime. Proactive, responsive, and they actually explain things in plain language.',
     name: 'James Chigumba',
     role: 'Operations Director',
-    company: 'Greenfield Energy',
+    company: 'OK Zimbabwe',
   },
 ];
 
