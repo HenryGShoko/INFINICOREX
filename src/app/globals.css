@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ── */
+@theme inline {
+  /* Brand Colors — WhatsApp green, lightened 50% */
+  --color-brand-50: #f4fef8;
+  --color-brand-100: #e2fded;
+  --color-brand-200: #c6fada;
+  --color-brand-300: #92e9b3;
+  --color-brand-400: #5cd88a;
+  --color-brand-500: #3dcf74;
+  --color-brand-600: #25d366;
+  --color-brand-700: #20bd5a;
+  --color-brand-800: #1a9448;
+  --color-brand-900: #17793c;
+  --color-brand-950: #0a4421;
+
+  /* VS Code blue surfaces — #007ACC as primary dark bg */
+  --color-navy-950: #007acc;
+  --color-navy-900: #006bb3;
+  --color-navy-800: #2d8fd6;
+  --color-navy-700: #4da3e0;
+  --color-navy-600: #6db7e9;
+
+  /* Slate neutrals */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+
+  /* Semantic */
+  --color-success: #059669;
+  --color-error: #dc2626;
+
+  /* Typography */
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base ── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--color-slate-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus ── */
+*:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* ── Selection ── */
+::selection {
+  background-color: var(--color-brand-200);
+  color: var(--color-brand-950);
+}
+
+/* ── Subtle grid for dark sections ── */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* ── Dot pattern for light sections ── */
+.bg-dot-pattern {
+  background-image: radial-gradient(circle, var(--color-slate-200) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Dropdown animation ── */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
