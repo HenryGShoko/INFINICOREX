@@ -26,7 +26,7 @@ export function ConsultationSection({ section, contactEmail }: ConsultationSecti
                 <h2 className="text-[1.75rem] sm:text-[2rem] font-bold tracking-[-0.025em] text-white leading-[1.2] mb-4">
                   {section.heading}
                 </h2>
-                <p className="text-base text-white/80 leading-[1.6]">
+                <p className="text-base text-white leading-[1.6]">
                   {section.supportingText}
                 </p>
 
@@ -39,7 +39,7 @@ export function ConsultationSection({ section, contactEmail }: ConsultationSecti
                   ].map((point) => (
                     <div key={point} className="flex items-center gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-brand-400 shrink-0" />
-                      <span className="text-sm text-white/70">{point}</span>
+                      <span className="text-sm text-white/95">{point}</span>
                     </div>
                   ))}
                 </div>

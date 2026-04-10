@@ -57,12 +57,12 @@ export default async function ServicePage({ params }: ServicePageProps) {
         <Container>
           <div className="relative py-16 sm:py-20 lg:py-24">
             {/* Breadcrumb */}
-            <div className="flex items-center gap-2 text-sm text-white/50 mb-8">
+            <div className="flex items-center gap-2 text-sm text-white/90 mb-8">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
               <span>/</span>
               <a href="#services" className="hover:text-white transition-colors">Services</a>
               <span>/</span>
-              <span className="text-white/70">{category.title}</span>
+              <span className="text-white/95">{category.title}</span>
             </div>
 
             <p className="text-xs font-semibold uppercase tracking-[0.08em] text-brand-300 mb-4">
@@ -72,7 +72,7 @@ export default async function ServicePage({ params }: ServicePageProps) {
               {service.title}
             </h1>
             {service.description && (
-              <p className="mt-5 text-lg text-white/80 leading-[1.6] max-w-xl">
+              <p className="mt-5 text-lg text-white leading-[1.6] max-w-xl">
                 {service.description}
               </p>
             )}

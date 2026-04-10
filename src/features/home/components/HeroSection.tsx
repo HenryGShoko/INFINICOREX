@@ -26,7 +26,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 rounded-full border border-white/[0.15] bg-white/[0.08] px-3.5 py-1.5 mb-7">
               <div className="w-1.5 h-1.5 rounded-full bg-brand-400" />
-              <span className="text-sm font-medium text-white/80">
+              <span className="text-sm font-medium text-white">
                 Software Engineering & IT Services
               </span>
             </div>
@@ -35,7 +35,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
               {hero.headline}
             </h1>
 
-            <p className="mt-5 text-lg text-white/80 leading-[1.6] max-w-[540px]">
+            <p className="mt-5 text-lg text-white leading-[1.6] max-w-[540px]">
               {hero.subheadline}
             </p>
 
@@ -66,7 +66,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
                 </div>
                 <div>
                   <p className="text-sm font-semibold text-white">{label}</p>
-                  <p className="text-[13px] text-white/60 mt-0.5 leading-snug">{detail}</p>
+                  <p className="text-[13px] text-white/90 mt-0.5 leading-snug">{detail}</p>
                 </div>
               </div>
             ))}
@@ -79,7 +79,7 @@ export function HeroSection({ hero }: HeroSectionProps) {
             {['Production-grade systems', 'Full-stack delivery', 'Ongoing support'].map((item) => (
               <div key={item} className="flex items-center gap-2">
                 <div className="w-1 h-1 rounded-full bg-brand-400" />
-                <span className="text-sm text-white/60">{item}</span>
+                <span className="text-sm text-white/90">{item}</span>
               </div>
             ))}
           </div>

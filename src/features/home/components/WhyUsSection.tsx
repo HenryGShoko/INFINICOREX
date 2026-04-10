@@ -57,14 +57,14 @@ function WhyUsCard({ item, index }: { item: WhyUsItem; index: number }) {
         <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-400/15 text-brand-300">
           <Icon className="w-[18px] h-[18px]" />
         </div>
-        <span className="text-xs font-mono text-white/20">
+        <span className="text-xs font-mono text-white/50">
           {String(index + 1).padStart(2, '0')}
         </span>
       </div>
       <h3 className="text-base font-semibold text-white mb-2">
         {item.title}
       </h3>
-      <p className="text-sm text-white/70 leading-relaxed">{item.description}</p>
+      <p className="text-sm text-white/95 leading-relaxed">{item.description}</p>
     </div>
   );
 }

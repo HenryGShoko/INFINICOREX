@@ -29,14 +29,14 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
                   {settings.logoText}
                 </span>
               </Link>
-              <p className="text-sm text-white/60 leading-relaxed max-w-[280px]">
+              <p className="text-sm text-white/95 leading-relaxed max-w-[280px]">
                 {settings.footerContent}
               </p>
             </div>
 
             {/* Navigation */}
             <div className="lg:col-span-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/90 mb-4">
                 Company
               </p>
               <ul className="space-y-2.5">
@@ -46,7 +46,7 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
                     <li key={label}>
                       <a
                         href={`#${id}`}
-                        className="text-sm text-white/70 hover:text-white transition-colors"
+                        className="text-sm text-white/95 hover:text-white transition-colors"
                       >
                         {label}
                       </a>
@@ -58,13 +58,13 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
 
             {/* Services */}
             <div className="lg:col-span-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/90 mb-4">
                 Services
               </p>
               <ul className="space-y-2.5">
                 {serviceCategories.map((cat) => (
                   <li key={cat.id}>
-                    <a href="#services" className="text-sm text-white/70 hover:text-white transition-colors">
+                    <a href="#services" className="text-sm text-white/95 hover:text-white transition-colors">
                       {cat.title}
                     </a>
                   </li>
@@ -74,20 +74,20 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
 
             {/* Contact */}
             <div className="lg:col-span-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/50 mb-4">
+              <p className="text-xs font-semibold uppercase tracking-[0.08em] text-white/90 mb-4">
                 Contact
               </p>
               <ul className="space-y-2.5">
                 {settings.contactEmail && (
                   <li>
-                    <a href={`mailto:${settings.contactEmail}`} className="text-sm text-white/70 hover:text-white transition-colors">
+                    <a href={`mailto:${settings.contactEmail}`} className="text-sm text-white/95 hover:text-white transition-colors">
                       {settings.contactEmail}
                     </a>
                   </li>
                 )}
                 {settings.contactPhone && (
                   <li>
-                    <a href={`tel:${settings.contactPhone.replace(/\s/g, '')}`} className="text-sm text-white/70 hover:text-white transition-colors">
+                    <a href={`tel:${settings.contactPhone.replace(/\s/g, '')}`} className="text-sm text-white/95 hover:text-white transition-colors">
                       {settings.contactPhone}
                     </a>
                   </li>
@@ -97,7 +97,7 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
                     href="https://wa.me/27621496491?text=Hi%20INFINICOREX%2C%20I'd%20like%20to%20discuss%20a%20project."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-[#25D366] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm text-white/95 hover:text-[#25D366] transition-colors"
                   >
                     <WhatsAppIcon className="w-3.5 h-3.5" />
                     WhatsApp
@@ -109,19 +109,19 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
         </div>
 
         <div className="border-t border-white/[0.08] py-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-white/50">&copy; 2016 {settings.companyName}</p>
+          <p className="text-sm text-white/90">&copy; 2016 {settings.companyName}</p>
           <div className="flex items-center gap-4">
-            <a href="https://www.linkedin.com/company/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white/40 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/company/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-white/80 hover:text-white transition-colors">
               <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
-            <a href="https://x.com/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white/40 hover:text-white transition-colors">
+            <a href="https://x.com/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-white/80 hover:text-white transition-colors">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             </a>
-            <a href="https://www.facebook.com/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/40 hover:text-white transition-colors">
+            <a href="https://www.facebook.com/infinicorex" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-white/80 hover:text-white transition-colors">
               <svg className="w-4.5 h-4.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
             </a>
           </div>
-          <p className="text-sm text-white/50">Eastgate Complex, 6th Floor Red Bridge South, Robert Mugabe Rd, Harare, Zimbabwe</p>
+          <p className="text-sm text-white/90">Eastgate Complex, 6th Floor Red Bridge South, Robert Mugabe Rd, Harare, Zimbabwe</p>
         </div>
       </Container>
     </footer>

@@ -44,7 +44,7 @@ export function SectionHeading({
       {subtitle && (
         <p
           className={`mt-5 text-base sm:text-lg leading-[1.6] ${
-            dark ? 'text-white/80' : 'text-slate-600'
+            dark ? 'text-white' : 'text-slate-600'
           }`}
         >
           {subtitle}
