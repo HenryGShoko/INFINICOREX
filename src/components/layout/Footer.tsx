@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import type { SiteSettings } from '@/domain/site/types';
 import type { ServiceCategory } from '@/domain/services/types';
 
@@ -88,6 +89,17 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
                     </a>
                   </li>
                 )}
+                <li>
+                  <a
+                    href="https://wa.me/27621496491?text=Hi%20INFINICOREX%2C%20I'd%20like%20to%20discuss%20a%20project."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-white/70 hover:text-[#25D366] transition-colors"
+                  >
+                    <WhatsAppIcon className="w-3.5 h-3.5" />
+                    WhatsApp
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

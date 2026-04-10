@@ -4,7 +4,15 @@ import type { FormResponse } from '@/domain/contact/types';
 
 export async function POST(request: Request): Promise<NextResponse<FormResponse>> {
   try {
-    const body = await request.json();
+    let body: unknown;
+    try {
+      body = await request.json();
+    } catch {
+      return NextResponse.json(
+        { success: false, message: 'Invalid request body.' },
+        { status: 400 },
+      );
+    }
     const result = consultationSchema.safeParse(body);
 
     if (!result.success) {

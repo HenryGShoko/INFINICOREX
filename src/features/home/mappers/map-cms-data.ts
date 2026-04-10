@@ -1,7 +1,7 @@
 import type { SiteSettings, HeroContent, WhyUsItem, ProcessStep, ConsultationSection } from '@/domain/site/types';
 import type { ServiceCategory } from '@/domain/services/types';
 
-interface RawServiceCategory {
+export interface RawServiceCategory {
   _id: string;
   title: string;
   description?: string;
@@ -9,14 +9,14 @@ interface RawServiceCategory {
   items?: Array<{ _key: string; slug?: string; title: string; description?: string }>;
 }
 
-interface RawWhyUsItem {
+export interface RawWhyUsItem {
   _id: string;
   title: string;
   description: string;
   iconKey?: string;
 }
 
-interface RawProcessStep {
+export interface RawProcessStep {
   _id: string;
   title: string;
   description: string;

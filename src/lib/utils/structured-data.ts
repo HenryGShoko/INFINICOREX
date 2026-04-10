@@ -8,7 +8,7 @@ export function getOrganizationSchema() {
     url: siteConfig.url,
     description: siteConfig.description,
     email: 'info@afriword.co.za',
-    telephone: '+27621476491',
+    telephone: '+27621496491',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Eastgate Complex, 6th Floor Red Bridge South, Robert Mugabe Rd',

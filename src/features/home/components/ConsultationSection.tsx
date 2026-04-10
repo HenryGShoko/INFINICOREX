@@ -1,13 +1,15 @@
 import { Mail, CheckCircle2 } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
+import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { ConsultationForm } from '@/components/forms/ConsultationForm';
 import type { ConsultationSection as ConsultationSectionType } from '@/domain/site/types';
 
 interface ConsultationSectionProps {
   section: ConsultationSectionType;
+  contactEmail: string;
 }
 
-export function ConsultationSection({ section }: ConsultationSectionProps) {
+export function ConsultationSection({ section, contactEmail }: ConsultationSectionProps) {
   return (
     <section id="consultation" className="py-24 lg:py-32 bg-white relative">
       <Container>
@@ -43,15 +45,23 @@ export function ConsultationSection({ section }: ConsultationSectionProps) {
                 </div>
               </div>
 
-              {/* Email */}
-              <div className="relative mt-10 pt-6 border-t border-white/[0.1]">
-                <p className="text-sm text-white/50 mb-1.5">Prefer email?</p>
+              {/* Contact alternatives */}
+              <div className="relative mt-10 pt-6 border-t border-white/[0.1] space-y-3">
                 <a
-                  href="mailto:info@afriword.co.za"
-                  className="inline-flex items-center gap-2 text-sm font-medium text-brand-300 hover:text-brand-200 transition-colors"
+                  href="https://wa.me/27621496491?text=Hi%20INFINICOREX%2C%20I'd%20like%20to%20discuss%20a%20project."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-[#25D366] hover:text-[#20bd5a] transition-colors"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
+                  Chat on WhatsApp
+                </a>
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="flex items-center gap-2 text-sm font-medium text-brand-300 hover:text-brand-200 transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  info@afriword.co.za
+                  {contactEmail}
                 </a>
               </div>
             </div>

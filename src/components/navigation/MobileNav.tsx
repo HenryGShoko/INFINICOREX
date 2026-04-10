@@ -39,7 +39,8 @@ export function MobileNav({ categories, ctaLabel }: MobileNavProps) {
         <div
           className="fixed inset-0 top-[65px] bg-black/10 backdrop-blur-[2px] z-40"
           onClick={() => setIsOpen(false)}
-          aria-hidden="true"
+          role="button"
+          aria-label="Close menu"
         />
       )}
 

@@ -14,6 +14,9 @@ import {
   mapWhyUsItems,
   mapProcessSteps,
   mapConsultationSection,
+  type RawServiceCategory,
+  type RawWhyUsItem,
+  type RawProcessStep,
 } from '../mappers/map-cms-data';
 import {
   fallbackSiteSettings,
@@ -47,11 +50,11 @@ export async function getHomePageData(): Promise<HomePageData> {
     ]);
 
   return {
-    siteSettings: mapSiteSettings(rawSettings as Record<string, string>) ?? fallbackSiteSettings,
-    hero: mapHero(rawHero as Record<string, string>) ?? fallbackHero,
-    serviceCategories: mapServiceCategories(rawCategories as null) ?? fallbackServiceCategories,
-    whyUsItems: mapWhyUsItems(rawWhyUs as null) ?? fallbackWhyUsItems,
-    processSteps: mapProcessSteps(rawSteps as null) ?? fallbackProcessSteps,
-    consultationSection: mapConsultationSection(rawConsultation as Record<string, string>) ?? fallbackConsultationSection,
+    siteSettings: mapSiteSettings(rawSettings as Record<string, string> | null) ?? fallbackSiteSettings,
+    hero: mapHero(rawHero as Record<string, string> | null) ?? fallbackHero,
+    serviceCategories: mapServiceCategories(rawCategories as RawServiceCategory[] | null) ?? fallbackServiceCategories,
+    whyUsItems: mapWhyUsItems(rawWhyUs as RawWhyUsItem[] | null) ?? fallbackWhyUsItems,
+    processSteps: mapProcessSteps(rawSteps as RawProcessStep[] | null) ?? fallbackProcessSteps,
+    consultationSection: mapConsultationSection(rawConsultation as Record<string, string> | null) ?? fallbackConsultationSection,
   };
 }

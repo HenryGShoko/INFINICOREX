@@ -31,7 +31,7 @@ export function Header({ settings, serviceCategories }: HeaderProps) {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-0.5" aria-label="Main navigation">
-            <Link href="/#" className={navLinkClass}>Home</Link>
+            <Link href="/" className={navLinkClass}>Home</Link>
             <ServicesDropdown categories={serviceCategories} />
             <Link href="/#why-us" className={navLinkClass}>Why Us</Link>
             <Link href="/#process" className={navLinkClass}>Process</Link>
