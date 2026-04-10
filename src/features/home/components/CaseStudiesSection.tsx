@@ -15,7 +15,7 @@ interface CaseStudy {
 const caseStudies: CaseStudy[] = [
   {
     title: 'Logistics platform rebuild',
-    client: 'Atlas Logistics',
+    client: 'Seed Co',
     problem: 'Legacy booking system couldn\'t handle growing order volume, causing daily outages during peak hours.',
     solution: 'Rebuilt the platform with a modern stack, real-time tracking, and auto-scaling infrastructure.',
     result: '10x throughput, zero downtime in 12 months',
@@ -24,7 +24,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: 'Fintech compliance portal',
-    client: 'Meridian Finance',
+    client: 'Simbisa Brands',
     problem: 'Manual compliance workflows took 3 weeks per audit cycle and were error-prone.',
     solution: 'Built an automated compliance portal with document management, audit trails, and real-time reporting.',
     result: 'Audit cycle reduced from 3 weeks to 2 days',
@@ -33,7 +33,7 @@ const caseStudies: CaseStudy[] = [
   },
   {
     title: 'IT security overhaul',
-    client: 'Greenfield Energy',
+    client: 'Mammoth',
     problem: 'No centralised IT security. Endpoints unmanaged, no incident response plan, outdated firewalls.',
     solution: 'Deployed endpoint protection, SIEM monitoring, staff training, and a 24/7 incident response process.',
     result: 'Blocked ransomware attack within 6 months',
