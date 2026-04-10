@@ -30,7 +30,7 @@ export function ClientLogos() {
           {clients.map((client) => (
             <div
               key={client.name}
-              className="relative h-10 w-full max-w-[140px] grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              className="relative h-10 w-full max-w-[140px]"
             >
               <Image
                 src={client.src}
