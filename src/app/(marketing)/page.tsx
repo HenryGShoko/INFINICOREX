@@ -6,7 +6,6 @@ import { CaseStudiesSection } from '@/features/home/components/CaseStudiesSectio
 import { WhyUsSection } from '@/features/home/components/WhyUsSection';
 import { TestimonialsSection } from '@/features/home/components/TestimonialsSection';
 import { ProcessSection } from '@/features/home/components/ProcessSection';
-import { TeamSection } from '@/features/home/components/TeamSection';
 import { FaqSection } from '@/features/home/components/FaqSection';
 import { ConsultationSection } from '@/features/home/components/ConsultationSection';
 
@@ -23,7 +22,6 @@ export default async function HomePage() {
       <WhyUsSection items={whyUsItems} />
       <TestimonialsSection />
       <ProcessSection steps={processSteps} />
-      <TeamSection />
       <FaqSection />
       <ConsultationSection section={consultationSection} contactEmail={siteSettings.contactEmail} />
     </>
