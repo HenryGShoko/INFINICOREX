@@ -26,20 +26,17 @@ export function ClientLogos() {
         <p className="text-center text-xs font-semibold uppercase tracking-[0.1em] text-slate-400 mb-10">
           Trusted by forward-thinking businesses
         </p>
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-5 gap-8 lg:gap-10 items-center justify-items-center">
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-10">
           {clients.map((client) => (
-            <div
+            <Image
               key={client.name}
-              className="relative h-10 w-full max-w-[140px]"
-            >
-              <Image
-                src={client.src}
-                alt={client.name}
-                fill
-                className="object-contain"
-                sizes="140px"
-              />
-            </div>
+              src={client.src}
+              alt={client.name}
+              width={120}
+              height={80}
+              className="object-contain w-auto h-auto max-h-[70px]"
+              unoptimized
+            />
           ))}
         </div>
       </Container>
