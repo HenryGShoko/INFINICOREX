@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import { Inter, DM_Sans } from 'next/font/google';
 import { siteConfig } from '@/config/site';
 import { getOrganizationSchema } from '@/lib/utils/structured-data';
 import { GoogleAnalytics } from '@/components/ui/GoogleAnalytics';
@@ -11,8 +11,8 @@ const inter = Inter({
   display: 'swap',
 });
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: '--font-jakarta',
+const dmSans = DM_Sans({
+  variable: '--font-dm-sans',
   subsets: ['latin'],
   display: 'swap',
 });
@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="en" className={`${inter.variable} ${dmSans.variable}`}>
       <body className="min-h-screen flex flex-col antialiased">
         <script
           type="application/ld+json"
