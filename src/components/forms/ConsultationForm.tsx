@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CheckCircle } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
 import { Textarea } from '@/components/ui/Textarea';
@@ -42,6 +42,15 @@ export function ConsultationForm({ introText }: ConsultationFormProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [serverMessage, setServerMessage] = useState('');
+
+  useEffect(() => {
+    if (status !== 'success') return;
+    const timer = setTimeout(() => {
+      setStatus('idle');
+      setServerMessage('');
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [status]);
 
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
@@ -111,13 +120,7 @@ export function ConsultationForm({ introText }: ConsultationFormProps) {
           <CheckCircle className="w-6 h-6" />
         </div>
         <h3 className="text-lg font-semibold text-slate-900 mb-1.5">Request received</h3>
-        <p className="text-sm text-slate-600 max-w-xs mb-5">{serverMessage}</p>
-        <button
-          onClick={() => { setStatus('idle'); setServerMessage(''); }}
-          className="text-sm font-medium text-brand-600 hover:text-brand-700 transition-colors"
-        >
-          Send another request
-        </button>
+        <p className="text-sm text-slate-600 max-w-xs">{serverMessage}</p>
       </div>
     );
   }
