@@ -40,6 +40,14 @@
 
   /* Typography */
   --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-jakarta), var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* ── Heading font ── */
+h1, h2, h3, h4, h5, h6,
+nav a, nav button,
+.font-heading {
+  font-family: var(--font-heading);
 }
 
 /* ── Base ── */
