@@ -30,33 +30,33 @@ export function ServicesSection({ categories }: ServicesSectionProps) {
             return (
               <div
                 key={category.id}
-                className="group rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 transition-all duration-300 hover:border-brand-200 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] hover:-translate-y-1"
+                className="group rounded-2xl border border-white/10 bg-navy-950 p-6 sm:p-7 transition-all duration-300 hover:border-white/25 hover:shadow-[0_16px_48px_rgba(0,122,204,0.4)] hover:-translate-y-1"
               >
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-5">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-brand-50 text-brand-600 ring-1 ring-brand-100">
+                  <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-white/10 text-white ring-1 ring-white/20">
                     <Icon className="w-[18px] h-[18px]" />
                   </div>
-                  <h3 className="text-base font-semibold text-slate-900">
+                  <h3 className="text-base font-semibold text-white">
                     {category.title}
                   </h3>
                 </div>
 
                 {category.description && (
-                  <p className="text-sm text-slate-500 leading-relaxed mb-5">
+                  <p className="text-sm text-white/80 leading-relaxed mb-5">
                     {category.description}
                   </p>
                 )}
 
                 {/* Divider */}
-                <div className="h-px bg-slate-100 mb-4" />
+                <div className="h-px bg-white/15 mb-4" />
 
                 {/* Items */}
                 <ul className="space-y-1">
                   {category.items.map((item, itemIdx) => (
                     <li key={item.id}>
-                      <div className="flex items-center gap-2.5 py-1.5 text-sm text-slate-700 group-hover:text-slate-800 transition-colors">
-                        <span className="text-xs font-mono text-slate-300 w-4 text-right shrink-0">
+                      <div className="flex items-center gap-2.5 py-1.5 text-sm text-white/90 group-hover:text-white transition-colors">
+                        <span className="text-xs font-mono text-white/45 w-4 text-right shrink-0">
                           {String(itemIdx + 1).padStart(2, '0')}
                         </span>
                         <span>{item.title}</span>
@@ -66,8 +66,8 @@ export function ServicesSection({ categories }: ServicesSectionProps) {
                 </ul>
 
                 {/* Category number */}
-                <div className="mt-6 pt-4 border-t border-slate-100">
-                  <span className="text-xs font-mono text-slate-300 tracking-wider">
+                <div className="mt-6 pt-4 border-t border-white/15">
+                  <span className="text-xs font-mono text-white/50 tracking-wider">
                     {String(idx + 1).padStart(2, '0')} / {String(categories.length).padStart(2, '0')}
                   </span>
                 </div>
