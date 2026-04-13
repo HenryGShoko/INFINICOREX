@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
@@ -21,13 +22,19 @@ export function Footer({ settings, serviceCategories }: FooterProps) {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:grid-cols-12">
             {/* Brand */}
             <div className="col-span-2 sm:col-span-4 lg:col-span-4 mb-4 lg:mb-0">
-              <Link href="/" className="inline-flex items-center gap-2 mb-4">
-                <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-600 to-brand-700 flex items-center justify-center shadow-[0_1px_3px_rgba(37,211,102,0.3)]">
-                  <span className="text-[11px] font-bold text-white leading-none tracking-tight">IX</span>
-                </div>
-                <span className="text-sm font-bold tracking-[-0.02em] text-white">
-                  {settings.logoText}
-                </span>
+              <Link
+                href="/"
+                className="inline-flex items-center mb-4"
+                aria-label={settings.logoText}
+              >
+                <Image
+                  src="/logo-v4-dark.png"
+                  alt={settings.logoText}
+                  width={600}
+                  height={92}
+                  sizes="(min-width: 1024px) 260px, 220px"
+                  className="h-9 w-auto lg:h-10"
+                />
               </Link>
               <p className="text-sm text-white/95 leading-relaxed max-w-[280px]">
                 {settings.footerContent}

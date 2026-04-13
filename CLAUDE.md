@@ -9,7 +9,7 @@ INFINICOREX is a production-ready marketing website for an IT company offering s
 ## Commands
 
 ```bash
-npm run dev          # Start dev server (Turbopack)
+npm run dev          # Start dev server (Next.js 16 defaults to Turbopack)
 npm run build        # Production build
 npm run start        # Start production server
 npm run lint         # Run ESLint (flat config)
@@ -24,6 +24,7 @@ No test framework is configured yet — there are no test scripts or test files.
 - **Language:** TypeScript (strict, no `any`)
 - **Styling:** Tailwind CSS v4 (config via CSS `@theme` in `globals.css`, no `tailwind.config.ts`)
 - **CMS:** Sanity (gracefully degrades to fallback data when not configured)
+- **Email:** Resend (installed as dependency; delivery still TODO in `api/contact/route.ts`)
 - **Deployment:** Vercel
 - **Validation:** Zod (shared client/server schema)
 - **Icons:** lucide-react
@@ -117,7 +118,7 @@ Copy `.env.local.example` to `.env.local`. Required for CMS:
 
 ## Remaining TODOs
 
-- Integrate email delivery service in `src/app/api/contact/route.ts` (Resend, SendGrid, etc.)
+- Wire the installed Resend SDK into `src/app/api/contact/route.ts` (currently stubbed)
 - Set up Sanity project and configure env vars
 - Add favicon and OG image assets to `public/`
 - Implement future route placeholders (`/services`, `/about`, `/contact`) when needed

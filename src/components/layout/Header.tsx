@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Button } from '@/components/ui/Button';
@@ -18,15 +19,18 @@ export function Header({ settings, serviceCategories }: HeaderProps) {
   return (
     <header className="sticky top-0 z-40 bg-white/80 backdrop-blur-2xl border-b border-slate-100">
       <Container>
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <Link href="/" className="relative z-10 flex items-center gap-2.5 shrink-0">
-            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-600 to-brand-700 flex items-center justify-center shadow-[0_1px_3px_rgba(37,211,102,0.3)]">
-              <span className="text-[11px] font-bold text-white leading-none tracking-tight">IX</span>
-            </div>
-            <span className="text-[15px] font-bold tracking-[-0.03em] text-slate-900">
-              {settings.logoText}
-            </span>
+          <Link href="/" className="relative z-10 flex items-center shrink-0" aria-label={settings.logoText}>
+            <Image
+              src="/logo-v3.png"
+              alt={settings.logoText}
+              width={600}
+              height={92}
+              priority
+              sizes="(min-width: 1024px) 380px, 280px"
+              className="h-10 w-auto lg:h-12"
+            />
           </Link>
 
           {/* Desktop Nav */}
