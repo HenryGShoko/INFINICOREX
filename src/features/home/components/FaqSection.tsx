@@ -21,7 +21,7 @@ const faqs: FaqItem[] = [
   },
   {
     question: 'What technologies do you work with?',
-    answer: 'Our core stack includes TypeScript, React, Next.js, Node.js, and Python on the software side. For infrastructure, we work with AWS, Azure, and Google Cloud. We choose the right tool for your specific needs, not whatever is trending.',
+    answer: 'We are technology-agnostic. Our team works across modern web, mobile, backend, cloud, and data stacks — and will meet you on whatever platforms, languages, or tools your business already relies on. The choice is driven by your goals, your team, and what the problem actually needs — not by trends.',
   },
   {
     question: 'Do you work with businesses outside Zimbabwe?',
