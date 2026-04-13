@@ -7,7 +7,7 @@ export function getOrganizationSchema() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
-    email: 'info@afriword.co.za',
+    email: 'info@infinicorex.co.za',
     telephone: '+27621496491',
     address: {
       '@type': 'PostalAddress',

@@ -6,7 +6,7 @@ export const fallbackSiteSettings: SiteSettings = {
   logoText: 'INFINICOREX',
   primaryCtaLabel: 'Book a consultation',
   secondaryCtaLabel: 'View services',
-  contactEmail: 'info@afriword.co.za',
+  contactEmail: 'info@infinicorex.co.za',
   contactPhone: '+27 62 149 6491',
   footerContent: 'Building reliable technology for serious businesses.',
 };

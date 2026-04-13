@@ -7,7 +7,7 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
-const TO_EMAIL = process.env.CONTACT_EMAIL_TO || 'info@afriword.co.za';
+const TO_EMAIL = process.env.CONTACT_EMAIL_TO || 'info@infinicorex.co.za';
 const FROM_EMAIL = process.env.CONTACT_EMAIL_FROM || 'INFINICOREX <onboarding@resend.dev>';
 
 export async function POST(request: Request): Promise<NextResponse<FormResponse>> {
